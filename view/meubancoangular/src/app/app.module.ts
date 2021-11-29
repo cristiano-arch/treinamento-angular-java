@@ -8,8 +8,9 @@ import { ExtratoComponent } from './pages/extrato/extrato.component';
 import { DepositoComponent } from './pages/deposito/deposito.component';
 import { SaqueComponent } from './pages/saque/saque.component';
 import { HomeComponent } from './pages/home/home.component';
+import { EstudoComponent } from './components/estudo/estudo.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, ExtratoComponent, DepositoComponent, SaqueComponent, HomeComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, ExtratoComponent, DepositoComponent, SaqueComponent, HomeComponent, EstudoComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
