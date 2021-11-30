@@ -11,7 +11,7 @@ export class EstudoComponent implements OnInit {
   exibindo: boolean = false;
 
   @Input()
-  exibirTextoAlerta: string = 'Hello There!!!';
+  exibirTextoAlerta: string = '';
 
   constructor() { }
 
