@@ -9,8 +9,11 @@ import { DepositoComponent } from './pages/deposito/deposito.component';
 import { SaqueComponent } from './pages/saque/saque.component';
 import { HomeComponent } from './pages/home/home.component';
 import { EstudoComponent } from './components/estudo/estudo.component';
+import { ButtonComponent } from './components/button/button.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { InputComponent } from './components/input/input.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, ExtratoComponent, DepositoComponent, SaqueComponent, HomeComponent, EstudoComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, ExtratoComponent, DepositoComponent, SaqueComponent, HomeComponent, EstudoComponent, ButtonComponent, CheckboxComponent, InputComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
