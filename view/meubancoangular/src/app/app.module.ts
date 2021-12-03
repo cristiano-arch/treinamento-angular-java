@@ -13,9 +13,14 @@ import { ButtonComponent } from './components/button/button.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { InputComponent } from './components/input/input.component';
 import { ClientesComponent } from './pages/clientes/clientes/clientes.component';
+import { CadastrarClientesComponent } from './pages/clientes/cadastrar-clientes/cadastrar-clientes.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, ExtratoComponent, DepositoComponent, SaqueComponent, HomeComponent, EstudoComponent, ButtonComponent, CheckboxComponent, InputComponent, ClientesComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, ExtratoComponent, DepositoComponent, SaqueComponent, HomeComponent, EstudoComponent, ButtonComponent, CheckboxComponent, InputComponent, ClientesComponent, CadastrarClientesComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
