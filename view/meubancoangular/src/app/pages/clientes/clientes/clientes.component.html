@@ -16,6 +16,7 @@
       <th scope="col">E-mail</th>
       <th scope="col">Observações</th>
       <th scope="col">Ativo</th>
+      <th scope="col">Ações</th>
     </tr>
   </thead>
   <tbody>
@@ -25,14 +26,15 @@
       <td>{{ cliente.cpf }}</td>
       <td>{{ cliente.email}}</td>
       <td>{{ cliente.observacoes }}</td>
-
       <td>
         <i *ngIf="cliente.ativo" class="fas fa-thumbs-up text-success"></i>
         <i *ngIf="!cliente.ativo" class="fas fa-thumbs-down text-danger"></i>
-
+      </td>
+      <td>
+        <a class="btn btn-danger btn-small" (click)="confirmar(cliente.id)">Remover</a>
       </td>
     </tr>
   </tbody>
 </table>
 
-<a class="btn btn-dark" routerLink="/cadastrar-clientes">Cadastrar novo</a>
+<a class="btn btn-dark" routerLink="cadastrar">Cadastrar novo</a>

@@ -1,0 +1,29 @@
+<h1>
+  Cadastrar cliente
+</h1>
+<hr>
+
+<small>
+  {{ formGroup.value | json }}
+  {{ formGroup.valid }}
+</small>
+
+<form [formGroup]="formGroup" (ngSubmit)="enviar()">
+  <div class="mb-3">
+    <label for="">Nome</label>
+    <input type="text" class="form-control" formControlName="nome">
+  </div>
+  <div class="mb-3">
+    <label for="">CPF</label>
+    <input type="text" class="form-control" formControlName="cpf">
+  </div>
+  <div class="mb-3">
+    <label for="">E-mail</label>
+    <input type="text" class="form-control" formControlName="email">
+  </div>
+  <div class="mb-3">
+    <label for="">Observações</label>
+    <input type="text" class="form-control" formControlName="observacoes">
+  </div>
+  <button type="submit" [disabled]="!formGroup.valid" class="btn btn-dark">Enviar</button>
+</form>
