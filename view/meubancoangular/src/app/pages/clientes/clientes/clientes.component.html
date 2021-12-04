@@ -1,31 +1,36 @@
 <h1>Clientes</h1>
 
-<table class="table">
+<div class="mb-4" *ngIf="!clientes.length" >
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  Waiting for...
+</div>
+
+<table *ngIf="clientes.length" class="table table-dark table-striped">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">ID</th>
+      <th scope="col">Nome</th>
+      <th scope="col">CPF</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Observações</th>
+      <th scope="col">Ativo</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{ cliente.id }}</td>
+      <td>{{ cliente.nome }}</td>
+      <td>{{ cliente.cpf }}</td>
+      <td>{{ cliente.email}}</td>
+      <td>{{ cliente.observacoes }}</td>
+
+      <td>
+        <i *ngIf="cliente.ativo" class="fas fa-thumbs-up text-success"></i>
+        <i *ngIf="!cliente.ativo" class="fas fa-thumbs-down text-danger"></i>
+
+      </td>
     </tr>
   </tbody>
 </table>

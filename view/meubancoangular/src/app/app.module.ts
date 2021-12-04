@@ -15,12 +15,15 @@ import { InputComponent } from './components/input/input.component';
 import { ClientesComponent } from './pages/clientes/clientes/clientes.component';
 import { CadastrarClientesComponent } from './pages/clientes/cadastrar-clientes/cadastrar-clientes.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ContasComponent } from './pages/contas/contas.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, ExtratoComponent, DepositoComponent, SaqueComponent, HomeComponent, EstudoComponent, ButtonComponent, CheckboxComponent, InputComponent, ClientesComponent, CadastrarClientesComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, ExtratoComponent, DepositoComponent, SaqueComponent, HomeComponent, EstudoComponent, ButtonComponent, CheckboxComponent, InputComponent, ClientesComponent, CadastrarClientesComponent, ContasComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule],
+    ReactiveFormsModule,
+    HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
