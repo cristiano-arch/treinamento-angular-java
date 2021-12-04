@@ -1,0 +1,29 @@
+<h1>Contas</h1>
+
+<div class="mb-4" *ngIf="!contas.length" >
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  Waiting for...
+</div>
+
+<table *ngIf="contas.length" class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Agência</th>
+      <th scope="col">Conta</th>
+      <th scope="col">Cliente</th>
+      <th scope="col">Saldo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let conta of contas">
+      <td>{{ conta.agencia }}</td>
+      <td>{{ conta.numero }}</td>
+      <td>{{ conta.cliente.nome }}</td>
+      <td>{{ conta.saldo | currency: 'BRL' }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<a class="btn btn-dark" routerLink="/cadastrar-clientes">Cadastrar nova</a>

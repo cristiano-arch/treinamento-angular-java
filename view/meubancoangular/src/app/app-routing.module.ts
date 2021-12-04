@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarClientesComponent } from './pages/clientes/cadastrar-clientes/cadastrar-clientes.component';
 import { ClientesComponent } from './pages/clientes/clientes/clientes.component';
+import { ContasComponent } from './pages/contas/contas.component';
 import { DepositoComponent } from './pages/deposito/deposito.component';
 import { ExtratoComponent } from './pages/extrato/extrato.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'saque', component: SaqueComponent },
   { path: 'deposito', component: DepositoComponent },
   { path: 'clientes', component: ClientesComponent },
-  { path: 'cadastrar-clientes', component: CadastrarClientesComponent }
+  { path: 'cadastrar-clientes', component: CadastrarClientesComponent },
+  { path: 'contas', component: ContasComponent }
 ];
 
 @NgModule({
