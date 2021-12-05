@@ -15,7 +15,11 @@ export class CadastroEdicaoClientesComponent implements OnInit {
   formGroup: FormGroup = new FormGroup({
     id: new FormControl(null),
     nome: new FormControl('', Validators.required),
-    cpf: new FormControl('', Validators.required),//565.327.260-44//56532726044
+    cpf: new FormControl('', Validators.required),
+    /* back end espera cpf valido
+    fake cpf: 565.327.260-44
+              56532726044
+    */
     email: new FormControl('', [Validators.required, Validators.email]),
     observacoes: new FormControl(''),
     ativo: new FormControl(true)

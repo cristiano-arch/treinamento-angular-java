@@ -13,14 +13,28 @@ import { ButtonComponent } from './components/button/button.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { InputComponent } from './components/input/input.component';
 import { ClientesComponent } from './pages/clientes/clientes/clientes.component';
-import { CadastrarClientesComponent } from './pages/clientes/cadastrar-clientes/cadastrar-clientes.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ContasComponent } from './pages/contas/contas.component';
+import { ContasComponent } from './pages/contas/contas/contas.component';
 import { CadastrarContasComponent } from './pages/contas/cadastrar-contas/cadastrar-contas.component';
 import { CadastroEdicaoClientesComponent } from './pages/clientes/cadastro-edicao-clientes/cadastro-edicao-clientes.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, ExtratoComponent, DepositoComponent, SaqueComponent, HomeComponent, EstudoComponent, ButtonComponent, CheckboxComponent, InputComponent, ClientesComponent, CadastrarClientesComponent, ContasComponent, CadastrarContasComponent, CadastroEdicaoClientesComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    ExtratoComponent,
+    DepositoComponent,
+    SaqueComponent,
+    HomeComponent,
+    EstudoComponent,
+    ButtonComponent,
+    CheckboxComponent,
+    InputComponent,
+    ClientesComponent,
+    ContasComponent,
+    CadastrarContasComponent,
+    CadastroEdicaoClientesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
