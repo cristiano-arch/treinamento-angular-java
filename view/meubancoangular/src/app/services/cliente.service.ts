@@ -12,7 +12,7 @@ export class ClienteService {
 
   constructor(private http: HttpClient) { }
 
-  listarTodosClientes( ) {
+  listarTodosClientes() {
     return this.http.get<ICliente[]>(this.api);
   }
 

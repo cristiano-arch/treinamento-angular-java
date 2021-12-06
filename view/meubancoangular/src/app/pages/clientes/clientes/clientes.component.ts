@@ -34,11 +34,7 @@ export class ClientesComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         this.clienteService.remover(id).subscribe(result => {
-          Swal.fire(
-            'Removed!',
-            'Removed successfully!',
-            'success'
-          );
+          Swal.fire('SUCCESS', 'Removed successfully!', 'success');
           this.listarTodosClientes();
         }, error => {
           console.error(error);

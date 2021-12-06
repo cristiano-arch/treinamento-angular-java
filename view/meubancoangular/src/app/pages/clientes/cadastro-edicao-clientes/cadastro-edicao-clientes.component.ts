@@ -17,8 +17,7 @@ export class CadastroEdicaoClientesComponent implements OnInit {
     nome: new FormControl('', Validators.required),
     cpf: new FormControl('', Validators.required),
     /* back end espera cpf valido
-    fake cpf: 565.327.260-44
-              56532726044
+     * fake cpf: 565.327.260-44 ou 56532726044
     */
     email: new FormControl('', [Validators.required, Validators.email]),
     observacoes: new FormControl(''),
@@ -35,7 +34,7 @@ export class CadastroEdicaoClientesComponent implements OnInit {
   enviar() {
     const cliente: ICliente = this.formGroup.value;
     this.clienteService.cadastrar(cliente).subscribe(clienteApi => {
-      Swal.fire('SUCCESS', 'Cadastrado!', 'success');
+      Swal.fire('SUCCESS', 'Registered succesfully!', 'success');
       this.router.navigate(['/clientes']);
     }, error => {
       console.error(error);
