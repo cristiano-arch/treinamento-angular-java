@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContasComponent } from './pages/contas/contas/contas.component';
 import { CadastrarContasComponent } from './pages/contas/cadastrar-contas/cadastrar-contas.component';
 import { CadastroEdicaoClientesComponent } from './pages/clientes/cadastro-edicao-clientes/cadastro-edicao-clientes.component';
+import { TransferenciaComponent } from './pages/transferencia/transferencia.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { CadastroEdicaoClientesComponent } from './pages/clientes/cadastro-edica
     ClientesComponent,
     ContasComponent,
     CadastrarContasComponent,
-    CadastroEdicaoClientesComponent],
+    CadastroEdicaoClientesComponent,
+    TransferenciaComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -9,6 +9,7 @@ import { DepositoComponent } from './pages/deposito/deposito.component';
 import { ExtratoComponent } from './pages/extrato/extrato.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SaqueComponent } from './pages/saque/saque.component';
+import { TransferenciaComponent } from './pages/transferencia/transferencia.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'clientes/cadastrar', component: CadastroEdicaoClientesComponent },
   { path: 'cadastrar/editar/:id', component: CadastroEdicaoClientesComponent },
   { path: 'contas', component: ContasComponent },
-  { path: 'contas/cadastrar', component: CadastrarContasComponent }
+  { path: 'contas/cadastrar', component: CadastrarContasComponent },
+  { path: 'transferencia', component: TransferenciaComponent }
 ];
 
 @NgModule({

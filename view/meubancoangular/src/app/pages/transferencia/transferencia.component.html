@@ -1,0 +1,30 @@
+<h1>Transferência</h1>
+
+<small>
+  {{ formGroup.value | json }}
+  {{ formGroup.valid }}
+</small>
+<p>
+
+<form [formGroup]="formGroup" (submit)="transferir()">
+  <div class="mb-3">
+    <label for="">Selecione a conta origem</label>
+    <select class="form-select" formControlName="origem">
+      <option *ngFor="let c of contas" [ngValue]="c">{{ c.cliente.nome }}</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="">Selecione a conta destino</label>
+    <select class="form-select" formControlName="destino">
+      <option selected>Selecione uma conta</option>
+      <option *ngFor="let c of contas" [ngValue]="c">{{ c.cliente.nome }}</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="">Valor</label>
+    <input type="text" class="form-control" formControlName="valor">
+  </div>
+
+  <button type="submit" [disabled]="!formGroup.valid" class="btn btn-dark">Transferir</button>
+</form>
+

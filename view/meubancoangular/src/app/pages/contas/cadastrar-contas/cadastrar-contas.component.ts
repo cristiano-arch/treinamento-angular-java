@@ -24,7 +24,7 @@ export class CadastrarContasComponent implements OnInit {
       cpf: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
       observacoes: new FormControl('', Validators.required),
-      ativo: new FormControl('', Validators.required),
+      ativo: new FormControl('', Validators.required)
     }),
     saldo: new FormControl('', Validators.required)
   });

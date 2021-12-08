@@ -8,20 +8,20 @@
 <form [formGroup]="formGroup" (submit)="enviar()">
   <div class="mb-3">
     <label for="">Agência</label>
-    <input class="form-control" formControlName="agencia">
+    <input type="text" class="form-control" formControlName="agencia">
   </div>
   <div class="mb-3">
     <label for="">Número da conta</label>
-    <input class="form-control" formControlName="numero">
+    <input type="text" class="form-control" formControlName="numero">
   </div>
   <div class="mb-3">
     <label for="">Saldo</label>
-    <input class="form-control" formControlName="saldo">
+    <input type="text" class="form-control" formControlName="saldo">
   </div>
   <div class="mb-3">
     <label for="">Selecione um cliente</label>
     <select class="form-select" formControlName="cliente">
-      <option aria-placeholder="sele" *ngFor="let c of clientes" [ngValue]="c">{{ c.nome }}</option>
+      <option *ngFor="let c of clientes" [ngValue]="c">{{ c.nome }}</option>
     </select>
   </div>
 

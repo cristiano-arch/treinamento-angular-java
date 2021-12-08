@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { IConta } from '../interfaces/conta';
 import { ISaqueDeposito } from '../interfaces/saque-deposito';
+import { ITransferencia } from '../interfaces/transferencia';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,10 @@ export class ContaService {
 
   depositar(deposito: ISaqueDeposito) {
     return this.http.post<ISaqueDeposito[]>(`${this.api}/deposito`, deposito);
+  }
+
+  transferir(transferencia: ITransferencia) {
+    return this.http.post<ITransferencia[]>(`${this.api}/transferencia`, transferencia);
   }
 
 }
