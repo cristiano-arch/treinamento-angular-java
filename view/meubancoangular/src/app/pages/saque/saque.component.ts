@@ -27,6 +27,7 @@ export class SaqueComponent implements OnInit {
     this.contaService.sacar(saque).subscribe(onResponse => {
       Swal.fire('SUCCESS', 'Successfully withdrawn!', 'success');
     }, onFailure => {
+      Swal.fire('Oops!', 'Something went wrong.', 'error');
       console.error(onFailure);
     });
 

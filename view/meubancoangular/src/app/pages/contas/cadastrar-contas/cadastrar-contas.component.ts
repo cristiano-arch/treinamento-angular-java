@@ -44,6 +44,7 @@ export class CadastrarContasComponent implements OnInit {
       Swal.fire('SUCCESS', 'Registered succesfully!', 'success');
       this.router.navigate(['/contas']);
     }, onFailure => {
+      Swal.fire('Oops!', 'Something went wrong.', 'error');
       console.error(onFailure);
     });
   }

@@ -27,6 +27,7 @@ export class DepositoComponent implements OnInit {
     this.contaService.depositar(deposito).subscribe(onResponse => {
       Swal.fire('SUCCESS', 'Successfully deposited!', 'success');
     }, onFailure => {
+      Swal.fire('Oops!', 'Something went wrong.', 'error');
       console.error(onFailure);
     });
   }

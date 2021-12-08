@@ -37,6 +37,7 @@ export class CadastroEdicaoClientesComponent implements OnInit {
       Swal.fire('SUCCESS', 'Registered succesfully!', 'success');
       this.router.navigate(['/clientes']);
     }, error => {
+      Swal.fire('Oops!', 'Something went wrong.', 'error');
       console.error(error);
     });
   }
