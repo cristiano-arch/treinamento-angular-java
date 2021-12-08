@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroEdicaoClientesComponent } from './pages/clientes/cadastro-edicao-clientes/cadastro-edicao-clientes.component';
 import { ClientesComponent } from './pages/clientes/clientes/clientes.component';
+import { CadastrarContasComponent } from './pages/contas/cadastrar-contas/cadastrar-contas.component';
 import { ContasComponent } from './pages/contas/contas/contas.component';
 import { DepositoComponent } from './pages/deposito/deposito.component';
 import { ExtratoComponent } from './pages/extrato/extrato.component';
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'clientes', component: ClientesComponent },
   { path: 'clientes/cadastrar', component: CadastroEdicaoClientesComponent },
   { path: 'cadastrar/editar/:id', component: CadastroEdicaoClientesComponent },
-  { path: 'contas', component: ContasComponent }
+  { path: 'contas', component: ContasComponent },
+  { path: 'contas/cadastrar', component: CadastrarContasComponent }
 ];
 
 @NgModule({

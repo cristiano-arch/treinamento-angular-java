@@ -20,4 +20,9 @@ export class ContaService {
   sacar(saqueDeposito: ISaqueDeposito) {
     return this.http.post<ISaqueDeposito[]>(`${this.api}/saque`, saqueDeposito);
   }
+
+  cadastrar(conta: IConta) {
+    return this.http.post<IConta[]>(this.api, conta);
+  }
+
 }

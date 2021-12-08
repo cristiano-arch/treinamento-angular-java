@@ -26,9 +26,8 @@ export class SaqueComponent implements OnInit {
     const saqueDeposito: ISaqueDeposito = this.formGroup.value;
     this.contaService.sacar(saqueDeposito).subscribe(onResponse => {
       Swal.fire('SUCCESS', 'Successfully withdrawn!', 'success')
-    },
-    onError => {
-      console.error(onError);
+    }, onFailure => {
+      console.error(onFailure);
     });
 
   }
