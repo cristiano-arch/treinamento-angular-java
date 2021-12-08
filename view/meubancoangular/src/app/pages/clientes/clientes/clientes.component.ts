@@ -40,7 +40,7 @@ export class ClientesComponent implements OnInit {
           console.error(error);
         });
       }
-    })
+    });
   }
 
 }

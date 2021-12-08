@@ -17,12 +17,16 @@ export class ContaService {
     return this.http.get<IConta[]>(this.api);
   }
 
-  sacar(saqueDeposito: ISaqueDeposito) {
-    return this.http.post<ISaqueDeposito[]>(`${this.api}/saque`, saqueDeposito);
+  sacar(saque: ISaqueDeposito) {
+    return this.http.post<ISaqueDeposito[]>(`${this.api}/saque`, saque);
   }
 
   cadastrar(conta: IConta) {
     return this.http.post<IConta[]>(this.api, conta);
+  }
+
+  depositar(deposito: ISaqueDeposito) {
+    return this.http.post<ISaqueDeposito[]>(`${this.api}/deposito`, deposito);
   }
 
 }

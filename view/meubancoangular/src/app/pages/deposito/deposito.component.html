@@ -1,15 +1,23 @@
 <h1>Depósito</h1>
 
-<div class="row">
-  <div class="col">
-    <app-input type="text" label="Agência"></app-input>
-  </div>
-  <div class="col">
-    <app-input type="text" label="Conta"></app-input>
-  </div>
-  <div class="col">
-    <app-input type="number" label="Valor"></app-input>
-  </div>
-</div>
+<small>
+  {{ formGroup.value | json }}
+  {{ formGroup.valid }}
+</small>
 
-<app-button textoBotao="Depositar"></app-button>
+<form [formGroup]="formGroup" (submit)="depositar()">
+  <div class="mb-3">
+    <label for="">Agência</label>
+    <input type="text" class="form-control" formControlName="agencia">
+  </div>
+  <div class="mb-3">
+    <label for="">Número da conta</label>
+    <input type="text" class="form-control" formControlName="numeroConta">
+  </div>
+  <div class="mb-3">
+    <label for="">Valor</label>
+    <input type="text" class="form-control" formControlName="valor">
+  </div>
+
+  <button type="submit" [disabled]="!formGroup.valid" class="btn btn-dark">Depositar</button>
+</form>
