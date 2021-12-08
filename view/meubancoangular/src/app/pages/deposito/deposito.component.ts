@@ -25,6 +25,7 @@ export class DepositoComponent implements OnInit {
   depositar() {
     const deposito: ISaqueDeposito = this.formGroup.value;
     this.contaService.depositar(deposito).subscribe(onResponse => {
+      this.formGroup.reset();
       Swal.fire('SUCCESS', 'Successfully deposited!', 'success');
     }, onFailure => {
       Swal.fire('Oops!', 'Something went wrong.', 'error');
