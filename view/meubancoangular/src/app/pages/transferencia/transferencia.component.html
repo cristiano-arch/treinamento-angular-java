@@ -25,6 +25,9 @@
     <input type="text" class="form-control" formControlName="valor">
   </div>
 
-  <button type="submit" [disabled]="!formGroup.valid" class="btn btn-dark">Transferir</button>
-</form>
+  <button type="submit" [disabled]="!formGroup.valid" class="btn btn-dark">
+    <span *ngIf="showSpinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    Transferir
+  </button>
 
+</form>

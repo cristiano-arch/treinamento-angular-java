@@ -13,6 +13,7 @@ import Swal from 'sweetalert2';
 export class TransferenciaComponent implements OnInit {
 
   contas: IConta[] = [];
+  showSpinner: boolean = false;
 
   formGroup: FormGroup = new FormGroup({
     origem: new FormGroup({
@@ -67,6 +68,8 @@ export class TransferenciaComponent implements OnInit {
   }
 
   transferir() {
+    this.showSpinner = true;
+
     this.form.value.agenciaDestino = this.formGroup.value.destino.agencia;
     this.form.value.agenciaOrigem = this.formGroup.value.origem.agencia;
     this.form.value.numeroContaDestino = this.formGroup.value.destino.numero;
@@ -75,10 +78,12 @@ export class TransferenciaComponent implements OnInit {
 
     const transferencia: ITransferencia = this.form.value;
     this.contaService.transferir(transferencia).subscribe(onResponse => {
+      this.showSpinner = false;
       this.listarTodasContas();
       this.limparForms();
       Swal.fire('SUCCSSESS', 'Successfully transferred', 'success');
     }, onFailure => {
+      this.showSpinner = false;
       Swal.fire('Oops!', 'Something went wrong.', 'error');
       console.error(onFailure);
     });

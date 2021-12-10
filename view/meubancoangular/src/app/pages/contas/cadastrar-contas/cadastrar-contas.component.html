@@ -27,7 +27,10 @@
     </select>
   </div>
 
-  <button type="submit" [disabled]="!formGroup.valid" class="btn btn-dark">Cadastrar</button>
+  <button type="submit" [disabled]="!formGroup.valid" class="btn btn-dark">
+    <span *ngIf="showSpinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    Cadastrar
+  </button>
 
 </form>
 

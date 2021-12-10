@@ -13,6 +13,8 @@ import Swal from 'sweetalert2';
 })
 export class CadastrarContasComponent implements OnInit {
 
+  showSpinner: boolean = false;
+
   clientes: ICliente[] = [];
 
   formGroup: FormGroup = new FormGroup({
@@ -39,11 +41,14 @@ export class CadastrarContasComponent implements OnInit {
   }
 
   enviar() {
+    this.showSpinner = true;
     const conta = this.formGroup.value;
     this.contaService.cadastrar(conta).subscribe(onResponse => {
+      this.showSpinner = false;
       Swal.fire('SUCCESS', 'Registered succesfully!', 'success');
       this.router.navigate(['/contas']);
     }, onFailure => {
+      this.showSpinner = false;
       Swal.fire('Oops!', 'Something went wrong.', 'error');
       console.error(onFailure);
     });

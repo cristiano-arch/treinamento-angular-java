@@ -11,6 +11,8 @@ import Swal from 'sweetalert2';
 })
 export class SaqueComponent implements OnInit {
 
+  showSpinner: boolean = false;
+
   formGroup: FormGroup = new FormGroup({
     agencia: new FormControl('', Validators.required),
     numeroConta: new FormControl('', Validators.required),
@@ -23,11 +25,14 @@ export class SaqueComponent implements OnInit {
   }
 
   sacar() {
+    this.showSpinner = true;
     const saque: ISaqueDeposito = this.formGroup.value;
     this.contaService.sacar(saque).subscribe(onResponse => {
+      this.showSpinner = false;
       this.formGroup.reset();
       Swal.fire('SUCCESS', 'Successfully withdrawn!', 'success');
     }, onFailure => {
+      this.showSpinner = false;
       Swal.fire('Oops!', 'Something went wrong.', 'error');
       console.error(onFailure);
     });

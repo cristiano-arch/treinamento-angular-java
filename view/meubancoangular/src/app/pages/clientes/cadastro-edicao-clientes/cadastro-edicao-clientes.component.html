@@ -26,5 +26,8 @@
     <label for="">Observações</label>
     <input type="text" class="form-control" formControlName="observacoes">
   </div>
-  <button type="submit" [disabled]="!formGroup.valid" class="btn btn-dark">Enviar</button>
+  <button type="submit" [disabled]="!formGroup.valid" class="btn btn-dark">
+    <span *ngIf="showSpinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    Enviar
+  </button>
 </form>

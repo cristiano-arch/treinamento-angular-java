@@ -12,6 +12,8 @@ import Swal from 'sweetalert2';
 })
 export class CadastroEdicaoClientesComponent implements OnInit {
 
+  showSpinner: boolean = false;
+
   formGroup: FormGroup = new FormGroup({
     id: new FormControl(null),
     nome: new FormControl('', Validators.required),
@@ -32,11 +34,14 @@ export class CadastroEdicaoClientesComponent implements OnInit {
   }
 
   enviar() {
+    this.showSpinner = true;
     const cliente: ICliente = this.formGroup.value;
     this.clienteService.cadastrar(cliente).subscribe(clienteApi => {
+      this.showSpinner = false;
       Swal.fire('SUCCESS', 'Registered succesfully!', 'success');
       this.router.navigate(['/clientes']);
     }, error => {
+      this.showSpinner = false;
       Swal.fire('Oops!', 'Something went wrong.', 'error');
       console.error(error);
     });
