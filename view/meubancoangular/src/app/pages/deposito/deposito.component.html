@@ -1,9 +1,11 @@
 <h1>Depósito</h1>
+<hr>
 
 <small>
   {{ formGroup.value | json }}
   {{ formGroup.valid }}
 </small>
+<p>
 
 <form [formGroup]="formGroup" (submit)="depositar()">
   <div class="mb-3">

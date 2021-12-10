@@ -1,9 +1,11 @@
 <h1>Saque</h1>
+<hr>
 
 <small>
   {{ formGroup.value | json }}
   {{ formGroup.valid }}
 </small>
+<p>
 
 <form [formGroup]="formGroup" (submit)="sacar()">
   <div class="mb-3">

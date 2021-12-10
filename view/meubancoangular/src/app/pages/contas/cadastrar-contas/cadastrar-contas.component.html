@@ -1,9 +1,11 @@
 <h1>Cadastrar contas</h1>
+<hr>
 
 <small>
   {{ formGroup.value | json }}
   {{ formGroup.valid }}
 </small>
+<p>
 
 <form [formGroup]="formGroup" (submit)="enviar()">
   <div class="mb-3">
