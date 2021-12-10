@@ -77,9 +77,9 @@ export class TransferenciaComponent implements OnInit {
     this.contaService.transferir(transferencia).subscribe(onResponse => {
       this.listarTodasContas();
       this.limparForms();
-      Swal.fire('SUCCSSESS', 'Successfully transferred', 'success')
+      Swal.fire('SUCCSSESS', 'Successfully transferred', 'success');
     }, onFailure => {
-      Swal.fire('Oops!', 'Something went wrong.', 'error')
+      Swal.fire('Oops!', 'Something went wrong.', 'error');
       console.error(onFailure);
     });
   }

@@ -37,6 +37,7 @@ export class ClientesComponent implements OnInit {
           Swal.fire('SUCCESS', 'Removed successfully!', 'success');
           this.listarTodosClientes();
         }, error => {
+          Swal.fire('Oops!', 'Something went wrong.', 'error');
           console.error(error);
         });
       }
