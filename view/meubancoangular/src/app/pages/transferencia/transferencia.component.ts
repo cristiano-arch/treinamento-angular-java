@@ -17,7 +17,7 @@ export class TransferenciaComponent implements OnInit {
 
   formGroup: FormGroup = new FormGroup({
     origem: new FormGroup({
-      id: new FormControl(null),
+      id: new FormControl('', Validators.required),
       agencia: new FormControl('', Validators.required),
       numero: new FormControl('', Validators.required),
       saldo: new FormControl('', Validators.required),
@@ -31,7 +31,7 @@ export class TransferenciaComponent implements OnInit {
       })
     }),
     destino: new FormGroup({
-      id: new FormControl(null),
+      id: new FormControl('', Validators.required),
       agencia: new FormControl('', Validators.required),
       numero: new FormControl('', Validators.required),
       saldo: new FormControl('', Validators.required),

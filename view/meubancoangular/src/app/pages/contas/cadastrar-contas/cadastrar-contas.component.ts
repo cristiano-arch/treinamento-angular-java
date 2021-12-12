@@ -18,6 +18,7 @@ export class CadastrarContasComponent implements OnInit {
   clientes: ICliente[] = [];
 
   formGroup: FormGroup = new FormGroup({
+    id: new FormControl(null),
     agencia: new FormControl('', Validators.required),
     numero: new FormControl('', Validators.required),
     cliente: new FormGroup({
@@ -25,7 +26,7 @@ export class CadastrarContasComponent implements OnInit {
       nome: new FormControl('', Validators.required),
       cpf: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
-      observacoes: new FormControl('', Validators.required),
+      observacoes: new FormControl(''),
       ativo: new FormControl('', Validators.required)
     }),
     saldo: new FormControl('', Validators.required)
